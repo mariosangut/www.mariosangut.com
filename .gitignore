@@ -1,0 +1,7 @@
+*.
+!.gitignore
+!Dockerfile
+!docker-compose.yml
+!info.html
+!styles.css
+!logo.png

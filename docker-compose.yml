@@ -1,0 +1,10 @@
+version: '3'
+services:
+  portfolio:
+    build: .
+    container_name: portfolio
+    restart: always
+    ports:
+      - "8081:80" # Maps port 8081 on host to 80 in container
+    volumes:
+      - .:/usr/share/nginx/html # Live reload for development
