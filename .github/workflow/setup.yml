@@ -1,0 +1,61 @@
+name: CI/CD Portfolio
+
+on:
+  push:
+    branches:
+      - main # Solo despliega cuando envías código a la rama principal
+
+env:
+  REGISTRY: ghcr.io
+  # Transforma automáticamente "TuUsuario/TuRepo" a minúsculas, requisito estricto de Docker
+  IMAGE_NAME: ${{ github.repository }} 
+
+jobs:
+  build-and-push:
+    name: Build & Push to GHCR
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write # Permiso crucial para subir la imagen a tu cuenta
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Login en GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }} # Token automático de GitHub, no tienes que crearlo
+
+      - name: Construir y Subir Imagen
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+
+  deploy:
+    name: Deploy to VPS
+    needs: build-and-push # Obliga a esperar a que la imagen esté subida
+    runs-on: ubuntu-latest
+    steps:
+      - name: Conexión SSH y Despliegue
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_KEY }}
+          script: |
+            # 1. Navega a la carpeta donde pusiste el docker-compose.yml en tu VPS
+            cd /opt/docker/nginx
+            
+            # 2. Descarga la imagen que acabamos de construir (convertida a minúsculas)
+            docker pull ${{ env.REGISTRY }}/$(echo ${{ env.IMAGE_NAME }} | tr '[:upper:]' '[:lower:]'):latest
+            
+            # 3. Recrea el contenedor sin tocar los demás servicios
+            docker compose up -d
+            
+            # 4. Limpia la basura: borra la imagen vieja para que tu disco no colapse
+            docker image prune -af

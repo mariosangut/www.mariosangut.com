@@ -1,10 +1,11 @@
-version: '3'
 services:
-  portfolio:
-    build: .
-    container_name: portfolio
+  nginx:
+    image: ghcr.io/mariosangut/mariosangut.com:latest
+    container_name: ct_web_mariosangut
     restart: always
-    ports:
-      - "8081:80" # Maps port 8081 on host to 80 in container
-    volumes:
-      - .:/usr/share/nginx/html # Live reload for development
+    network:
+      - proxy_network
+
+networks:
+  proxy_network:
+    external: true
