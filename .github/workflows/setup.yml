@@ -49,5 +49,5 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           key: ${{ secrets.VPS_KEY }}
           script: |
-            chmod +x script.sh
+            cd /opt/docker/nginx/
             ./script.sh
