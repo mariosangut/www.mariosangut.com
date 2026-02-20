@@ -1,4 +1,4 @@
-name: CI/CD Portfolioo
+name: CI/CD Portfolio
 
 on:
   push:
