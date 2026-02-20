@@ -429,13 +429,14 @@
             if (!container) return;
 
             try {
-                const response = await fetch('https://api.github.com/users/mariosangut/repos?sort=updated&per_page=6');
+                // Fetch more than needed to account for filtering, then slice exactly 6
+                const response = await fetch('https://api.github.com/users/mariosangut/repos?sort=updated&per_page=20');
                 if (!response.ok) throw new Error('API Rate limit or network error');
 
                 const repos = await response.json();
 
-                // Exclude forks and the profile repository
-                const publicRepos = repos.filter(repo => !repo.fork && repo.name !== 'mariosangut' && repo.name !== 'mariosangut.github.io');
+                // Exclude forks, the profile repositories, and the 'aboutme' repository, then take the latest 6
+                const publicRepos = repos.filter(repo => !repo.fork && repo.name !== 'mariosangut' && repo.name !== 'mariosangut.github.io' && repo.name !== 'aboutme').slice(0, 6);
 
                 container.innerHTML = ''; // Clear loading state
 
