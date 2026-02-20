@@ -49,14 +49,5 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           key: ${{ secrets.VPS_KEY }}
           script: |
-            # 1. Navega a la carpeta donde pusiste el docker-compose.yml en tu VPS
-            cd /opt/docker/nginx
-            
-            # 2. Descarga la imagen que acabamos de construir (convertida a minúsculas)
-            docker pull ${{ env.REGISTRY }}/$(echo ${{ env.IMAGE_NAME }} | tr '[:upper:]' '[:lower:]'):latest
-            
-            # 3. Recrea el contenedor sin tocar los demás servicios
-            docker compose up -d
-            
-            # 4. Limpia la basura: borra la imagen vieja para que tu disco no colapse
-            docker image prune -af
+            chmod +x script.sh
+            ./script.sh
