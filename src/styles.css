@@ -376,16 +376,6 @@ footer {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .boot-entry {
-        flex-direction: column;
-        gap: 0.2rem;
-    }
-}
 
 /* --- Education Pipeline (Visual Diagram) --- */
 .pipeline-container {
@@ -553,6 +543,160 @@ footer {
 
     100% {
         box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .nav-links {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: flex-start;
+        padding: 0.5rem 0 1rem 0;
+        /* extra padding for scrollbar */
+        gap: 1.5rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Custom scrollbar for nav links - sysadmin thematic */
+    .nav-links::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .nav-links::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+    }
+
+    .nav-links::-webkit-scrollbar-thumb {
+        background: var(--accent-primary);
+        border-radius: 4px;
+    }
+
+    .hero {
+        padding: 60px 0 40px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .terminal-prompt {
+        padding: 0.8rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .bento-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .boot-entry {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .pipeline-container::before {
+        left: 1rem;
+    }
+
+    .pipeline-node {
+        padding-left: 3.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .pipeline-marker {
+        left: 0;
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+
+    .pipeline-content {
+        padding: 1.2rem;
+    }
+
+    .pipeline-content::before {
+        left: -8px;
+        top: 1.2rem;
+        border-right: 8px solid var(--border-color);
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+    }
+
+    .pipeline-content:hover::before {
+        border-right-color: var(--accent-primary);
+    }
+
+    .log-card {
+        padding: 1.2rem;
+    }
+
+    .log-entry {
+        flex-direction: column;
+    }
+
+    .log-entry .label {
+        margin-bottom: 0.2rem;
+    }
+
+    .social-btns {
+        flex-wrap: wrap;
+    }
+
+    .btn-terminal {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-visual {
+        margin-bottom: 1.5rem;
+    }
+
+    .logo-img {
+        width: 100px;
+    }
+
+    .terminal-prompt {
+        font-size: 0.75rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem !important;
+    }
+
+    .pipeline-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    /* Make embedded Credly badge responsive without forcing limits */
+    .bento-card [data-iframe-width] {
+        transform: scale(0.9);
+        transform-origin: center top;
     }
 }
 
