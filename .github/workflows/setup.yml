@@ -1,15 +1,12 @@
-name: CI/CD Portfolioo
-
+name: CI/CD Portfolio
 on:
   push:
     branches:
       - main # Solo despliega cuando envías código a la rama principal
-
 env:
   REGISTRY: ghcr.io
   # Transforma automáticamente "TuUsuario/TuRepo" a minúsculas, requisito estricto de Docker
   IMAGE_NAME: ${{ github.repository }} 
-
 jobs:
   build-and-push:
     name: Build & Push to GHCR
@@ -42,10 +39,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Conexión SSH y Despliegue
-        env:
-          SSH_KEY: ${{ secrets.VPS_KEY }}
-        run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_KEY" > ~/.ssh/deployment_key
-          chmod 600 ~/.ssh/deployment_key
-          ssh -i ~/.ssh/deployment_key -o StrictHostKeyChecking=no -p ${{ secrets.VPS_PORT }} ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }} "cd /opt/docker/nginx/ && ./script.sh"
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_IP_PUBLIC }}
+          username: ${{ secrets.VPS_USER }}
+          port: ${{ secrets.VPS_PORT }}
+          key: ${{ secrets.VPS_KEY }}
+          script: |
+            cd /opt/docker/nginx/
+            ./script.sh
