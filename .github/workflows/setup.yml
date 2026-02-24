@@ -38,7 +38,7 @@ jobs:
 
   deploy:
     name: Deploy to VPS
-    needs: build-and-push # Obliga a esperar a que la imagen esté subida
+    needs: build-and-push 
     runs-on: ubuntu-latest
     steps:
       - name: Conexión SSH y Despliegue
