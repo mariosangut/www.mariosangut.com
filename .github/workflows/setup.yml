@@ -43,12 +43,13 @@ jobs:
     steps:
       - name: Setup Dedicated WireGuard Tunnel
         run: |
-          sudo apt-get update && sudo apt-get install -y wireguard resolvconf
+          sudo apt-get update && sudo apt-get install -y wireguard
           
           echo "
           [Interface]
           PrivateKey = ${{ secrets.VPS_WG_PRIVATEKEY }}
           Address = 10.99.0.2/24
+          DNS = 1.1.1.1, 8.8.8.8
           
           [Peer]
           PublicKey = ${{ secrets.VPS_WG_PUBLICKEY }}
@@ -65,12 +66,10 @@ jobs:
           ping -c 3 10.99.0.1
 
       - name: Conexión SSH y Despliegue
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.VPS_IP }}
-          username: ${{ secrets.VPS_USER }}
-          port: ${{ secrets.VPS_PORT }}
-          key: ${{ secrets.VPS_KEY }}
-          script: |
-            cd /opt/docker/nginx/
-            ./script.sh
+        env:
+          SSH_KEY: ${{ secrets.VPS_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/deployment_key
+          chmod 600 ~/.ssh/deployment_key
+          ssh -i ~/.ssh/deployment_key -o StrictHostKeyChecking=no -p ${{ secrets.VPS_PORT }} ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }} "cd /opt/docker/nginx/ && ./script.sh"
