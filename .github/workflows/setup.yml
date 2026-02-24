@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - main # Solo despliega cuando envías código a la rama principal
+    paths:
+      - 'src/**'
+      - 'Dockerfile'
+      - '.github/workflows/**'
 env:
   REGISTRY: ghcr.io
   # Transforma automáticamente "TuUsuario/TuRepo" a minúsculas, requisito estricto de Docker
