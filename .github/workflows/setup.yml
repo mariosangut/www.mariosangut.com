@@ -41,19 +41,6 @@ jobs:
     needs: build-and-push # Obliga a esperar a que la imagen esté subida
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
-      - name: Install WG
-        uses: promaton/wg-action@main
-        with:
-          interface_private_key: "${{ secrets.VPS_WG_PRIVATEKEY }}"
-          interface_address: "10.99.0.2/24"
-
-          peer_public_key: "${{ secrets.VPS_WG_PUBLICKEY }}"
-          peer_allowed_ips: "10.99.0.0/24"
-          peer_endpoint: "${{ secrets.VPS_IP_PUBLIC }}:51821"
-
-=======
->>>>>>> parent of ff5fc04 (feat: Add WireGuard tunnel setup to the deployment workflow.)
       - name: Conexión SSH y Despliegue
         env:
           SSH_KEY: ${{ secrets.VPS_KEY }}
