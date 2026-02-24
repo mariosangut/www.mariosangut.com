@@ -52,7 +52,7 @@ jobs:
           
           [Peer]
           PublicKey = ${{ secrets.VPS_WG_PUBLICKEY }}
-          Endpoint = ${{ secrets.VPS_IP_PUBLIC }}:51820
+          Endpoint = ${{ secrets.VPS_IP_PUBLIC }}:51821
           AllowedIPs = 10.99.0.0/24
           PersistentKeepalive = 25
           " | sudo tee /etc/wireguard/wg0.conf
