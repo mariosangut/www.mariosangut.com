@@ -54,7 +54,7 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           key: ${{ secrets.VPS_KEY }}
           script: |
-           echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io \ 
-            -u "${{ secrets.GHCR_USER }}" --password-stdin
+           docker login ghcr.io \ 
+            -u "${{ secrets.GHCR_USER }}" -p "${{ secrets.GHCR_TOKEN }}"
             cd /opt/docker/nginx/
             ./script.sh
