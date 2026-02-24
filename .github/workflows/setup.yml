@@ -25,25 +25,21 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }} # Token automático de GitHub, no tienes que crearlo
+       
+      - name: Short SHA
+        run: echo "SHORT_SHA=${GITHUB_SHA::7}" >> $GITHUB_ENV
+
+      - name: Set lowercase image name
+        run: echo "IMAGE_NAME_LC=${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
 
       - name: Construir y Subir Imagen
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          
-      - name: Short SHA
-        id: vars
-        run: echo "SHORT_SHA=${GITHUB_SHA::7}" >> $GITHUB_ENV
-        
-      - name: Construir y Subir Imagen
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
           tags: |
-            ghcr.io/${{ env.IMAGE_NAME }}:latest
-            ghcr.io/${{ env.IMAGE_NAME }}:${{ github.sha }}
+            ghcr.io/${{ env.IMAGE_NAME_LC }}:latest
+            ghcr.io/${{ env.IMAGE_NAME_LC }}:${{ env.SHORT_SHA }}
 
   deploy:
     name: Deploy to VPS
