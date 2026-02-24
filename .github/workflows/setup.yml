@@ -41,29 +41,15 @@ jobs:
     needs: build-and-push # Obliga a esperar a que la imagen esté subida
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Dedicated WireGuard Tunnel
-        run: |
-          sudo apt-get update && sudo apt-get install -y wireguard
-          
-          echo "
-          [Interface]
-          PrivateKey = ${{ secrets.VPS_WG_PRIVATEKEY }}
-          Address = 10.99.0.2/24
-          DNS = 1.1.1.1, 8.8.8.8
-          
-          [Peer]
-          PublicKey = ${{ secrets.VPS_WG_PUBLICKEY }}
-          Endpoint = ${{ secrets.VPS_IP_PUBLIC }}:51821
-          AllowedIPs = 10.99.0.0/24
-          PersistentKeepalive = 25
-          " | sudo tee /etc/wireguard/wg0.conf
-          
-          # Aunque en GitHub se llame wg0 localmente, se conecta a tu wg1 remoto
-          sudo wg-quick up wg0
-          sleep 2
-          
-          # Ping de prueba a la IP interna de tu VPS en esta subred
-          ping -c 3 10.99.0.1
+      - name: Install WG
+        uses: promaton/wg-action@main
+        with:
+          interface_private_key: "${{ secrets.VPS_WG_PRIVATEKEY }}"
+          interface_address: "10.99.0.2/24"
+
+          peer_public_key: "${{ secrets.VPS_WG_PUBLICKEY }}"
+          peer_allowed_ips: "10.99.0.0/24"
+          peer_endpoint: "${{ secrets.VPS_IP_PUBLIC }}:51821"
 
       - name: Conexión SSH y Despliegue
         env:
