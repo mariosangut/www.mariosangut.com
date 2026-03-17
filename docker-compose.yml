@@ -1,7 +1,7 @@
 services:
   nginx:
     image: ghcr.io/mariosangut/mariosangut.com:latest
-    container_name: ct_web_mariosangut
+    container_name: ct_portfolio
     restart: always
     network:
       - proxy_network
