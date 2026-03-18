@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Copiar archivos
-        uses: appleboy/scp-action@v1.0.3
+        uses: appleboy/scp-action@v1.0.0
         with:
           host: ${{ secrets.VPS_IP_PUBLIC }}
           username: ${{ secrets.VPS_USER }}
