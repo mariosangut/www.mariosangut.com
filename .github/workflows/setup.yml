@@ -7,6 +7,7 @@ on:
       - 'src/**'
       - 'Dockerfile'
       - '.github/workflows/**'
+      - 'vps/**'
 env:
   REGISTRY: ghcr.io
   # Transforma automáticamente "TuUsuario/TuRepo" a minúsculas, requisito estricto de Docker
@@ -50,6 +51,17 @@ jobs:
     needs: build-and-push 
     runs-on: ubuntu-latest
     steps:
+      - name: Copiar archivos
+        uses: appleboy/scp-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_IP_PUBLIC }}
+          username: ${{ secrets.VPS_USER }}
+          port: ${{ secrets.VPS_PORT }}
+          key: ${{ secrets.VPS_KEY }}
+          source: "../vps/"
+          target: "/opt/docker/nginx/"
+          rm: true  
+          
       - name: Conexión SSH y Despliegue
         uses: appleboy/ssh-action@v1.0.3
         with:
