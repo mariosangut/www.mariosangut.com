@@ -62,7 +62,7 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           key: ${{ secrets.VPS_KEY }}
           source: "vps/*"
-          target: "/opt/docker/nginx/"
+          target: "/tmp/vps_deploy/"
           strip_components: 1
 
       - name: Verify vps files exist
@@ -79,8 +79,13 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           key: ${{ secrets.VPS_KEY }}
           script: |
+            sudo cp -r /tmp/vps_deploy/* /opt/docker/nginx/
+            sudo chown -R $USER /opt/docker/nginx/
+            sudo rm -rf /tmp/vps_deploy
+            
             echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io \
             -u "${{ secrets.GHCR_USER }}" --password-stdin
 
             cd /opt/docker/nginx/
+            chmod +x script.sh
             ./script.sh
