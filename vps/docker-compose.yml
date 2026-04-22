@@ -1,7 +1,7 @@
 services:
   # 2. TU APLICACIÓN (Lo que tú me pasaste, corregido)
   portfolio:
-    image: ghcr.io/mariosangut/mariosangut.com:latest
+    image: ghcr.io/mariosangut/www.mariosangut.com:latest
     container_name: ct_portfolio
     restart: always
     # No necesitas exponer puertos aquí si el proxy está en la misma red
