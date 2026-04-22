@@ -51,6 +51,9 @@ jobs:
     needs: build-and-push 
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
       - name: Copiar archivos
         uses: appleboy/scp-action@v1.0.0
         with:
@@ -58,8 +61,9 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           port: ${{ secrets.VPS_PORT }}
           key: ${{ secrets.VPS_KEY }}
-          source: "/vps/**"
+          source: "vps/*"
           target: "/opt/docker/nginx/"
+          strip_components: 1
           rm: true  
 
       - name: Verify vps files exist
