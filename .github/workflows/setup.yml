@@ -58,9 +58,15 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           port: ${{ secrets.VPS_PORT }}
           key: ${{ secrets.VPS_KEY }}
-          source: "../vps/"
+          source: "vps/**"
           target: "/opt/docker/nginx/"
           rm: true  
+
+      - name: Verify vps files exist
+        run: |
+          test -d vps
+          test -n "$(ls -A vps)"
+
           
       - name: Conexión SSH y Despliegue
         uses: appleboy/ssh-action@v1.0.3
