@@ -1,9 +1,27 @@
 services:
-  nginx:
+  # 1. EL PROXY (El que gestiona el SSL Wildcard y el tráfico)
+  nginx-proxy:
+    image: nginx:alpine
+    container_name: ct_nginx_proxy_portfolio
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # Mapeas tus archivos de configuración (.conf)
+      - ./conf.d:/etc/nginx/conf.d:ro
+      # Mapeas tus certificados (fullchain.pem y privkey.pem)
+      - ./certs:/etc/nginx/certs:ro
+    networks:
+      - proxy_network
+
+  # 2. TU APLICACIÓN (Lo que tú me pasaste, corregido)
+  portfolio:
     image: ghcr.io/mariosangut/mariosangut.com:latest
     container_name: ct_portfolio
     restart: always
-    network:
+    # No necesitas exponer puertos aquí si el proxy está en la misma red
+    networks:
       - proxy_network
 
 networks:

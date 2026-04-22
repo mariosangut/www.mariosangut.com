@@ -12,6 +12,8 @@ echo "--- Iniciando despliegue en $PROJECT_DIR ---"
 # 2. Asegurar que estamos en el lugar correcto
 cd "$PROJECT_DIR" || { echo "Error: No se pudo acceder a $PROJECT_DIR"; exit 1; }
 
+
+
 # 3. Pull de las imágenes antes de apagar nada
 # Punto ciego: Si haces 'up' sin 'pull' previo, el tiempo de inactividad aumenta 
 # mientras el servidor descarga las capas. Descarga primero, despliega después.

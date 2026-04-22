@@ -106,8 +106,10 @@ code,
 
 .nav-links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
+    padding: 0 1rem;
     list-style: none;
 }
 
