@@ -58,7 +58,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           port: ${{ secrets.VPS_PORT }}
           key: ${{ secrets.VPS_KEY }}
-          source: "vps/**"
+          source: "/vps/**"
           target: "/opt/docker/nginx/"
           rm: true  
 
