@@ -64,7 +64,6 @@ jobs:
           source: "vps/*"
           target: "/opt/docker/nginx/"
           strip_components: 1
-          rm: true  
 
       - name: Verify vps files exist
         run: |
