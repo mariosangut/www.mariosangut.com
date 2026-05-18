@@ -5,13 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mario Sánchez | SysAdmin Portfolio</title>
-    <meta name="description" content="Portfolio de Mario Sánchez Gutiérrez, SysAdmin & DevOps Junior.">
-    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <meta name="description" content="Portfolio de Mario Sánchez Gutiérrez, SysAdmin & DevOps Junior. Especializado en Linux, Virtualización y Automatización.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230f172a'/><text x='22' y='75' font-size='70' fill='%2322c55e' font-family='monospace' font-weight='bold'>$</text></svg>">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mario Sánchez | SysAdmin Portfolio">
+    <meta property="og:description" content="SysAdmin Junior & DevOps Enthusiast. Especializado en Linux, Virtualización y Automatización.">
+    <meta property="og:url" content="https://www.mariosangut.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.mariosangut.com/logo.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Mario Sánchez | SysAdmin Portfolio">
+    <meta name="twitter:description" content="SysAdmin Junior & DevOps Enthusiast. Especializado en Linux, Virtualización y Automatización.">
+    <meta name="twitter:image" content="https://www.mariosangut.com/logo.png">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -28,9 +43,9 @@
                 <li><a href="#docs">/usr/share/doc</a></li>
                 <li><a href="#certs">/usr/share/certs</a></li>
                 <li><a href="#connect">ssh-connect</a></li>
-                <!-- Language Toggle -->
                 <li>
-                    <button id="langToggle" class="btn-terminal" style="padding: 0.2rem 0.6rem; font-size: 0.8rem;">
+                    <button id="langToggle" class="btn-terminal" aria-label="Toggle language"
+                        style="padding: 0.2rem 0.6rem; font-size: 0.8rem;">
                         <span class="lang-es">EN</span>
                         <span class="lang-en">ES</span>
                     </button>
@@ -42,7 +57,7 @@
     <header id="console" class="hero">
         <div class="container">
             <div class="hero-visual">
-                <img src="logo.png" alt="SysAdmin Logo" class="logo-img">
+                <img src="logo.png" alt="Mario Sánchez logo" class="logo-img">
             </div>
 
             <div class="terminal-prompt">
@@ -55,7 +70,7 @@
                 <span class="lang-en">SysAdmin Junior & DevOps Enthusiast</span>
             </p>
 
-            <p class="text-muted" style="max-width: 600px; margin: 0 auto 2rem;">
+            <p class="text-muted" style="max-width: 600px; margin: 0 auto 1.5rem;">
                 <span class="lang-es">
                     Responsable de garantizar la disponibilidad, seguridad y escalabilidad de infraestructuras críticas.
                     Especializado en Linux, Virtualización y Automatización.
@@ -67,12 +82,8 @@
             </p>
 
             <div class="social-btns">
-                <a href="https://github.com/mariosangut" target="_blank" class="btn-terminal">
-                    GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/mariosangut" target="_blank" class="btn-terminal">
-                    LinkedIn
-                </a>
+                <a href="https://github.com/mariosangut" target="_blank" class="btn-terminal">GitHub</a>
+                <a href="https://www.linkedin.com/in/mariosangut" target="_blank" class="btn-terminal">LinkedIn</a>
                 <a href="mailto:mariosangut@gmail.com" class="btn-terminal">
                     <span class="lang-es">Correo</span>
                     <span class="lang-en">Email</span>
@@ -83,15 +94,14 @@
 
     <main class="container">
 
-        <!-- Skills Section: The Stack -->
+        <!-- Skills Section -->
         <section id="stack" class="section">
-            <h2 class="section-title text-center" style="margin-bottom: 3rem;">
+            <h2 class="section-title text-center">
                 <span class="lang-es">Arquitectura del Sistema</span>
                 <span class="lang-en">System Architecture</span>
             </h2>
             <div class="bento-grid">
 
-                <!-- Orchestration & Cloud -->
                 <div class="bento-card">
                     <h3>
                         <span class="lang-es">Orquestación y Cloud</span>
@@ -108,7 +118,6 @@
                     </div>
                 </div>
 
-                <!-- OS & Scripting -->
                 <div class="bento-card">
                     <h3>
                         <span class="lang-es">Kernel y Scripting</span>
@@ -124,7 +133,6 @@
                     </div>
                 </div>
 
-                <!-- Networking & Security -->
                 <div class="bento-card">
                     <h3>
                         <span class="lang-es">Seguridad y Redes</span>
@@ -139,7 +147,6 @@
                     </div>
                 </div>
 
-                <!-- Web Services -->
                 <div class="bento-card">
                     <h3>
                         <span class="lang-es">Servicios y Demonios</span>
@@ -157,9 +164,9 @@
             </div>
         </section>
 
-        <!-- Projects Section: System Logs -->
+        <!-- Projects Section -->
         <section id="logs" class="section">
-            <h2 class="section-title text-center" style="margin-bottom: 3rem;">
+            <h2 class="section-title text-center">
                 <span class="lang-es">Registros del Proyecto</span>
                 <span class="lang-en">Project Logs</span>
             </h2>
@@ -172,197 +179,186 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <h2 class="section-title text-center" style="margin-bottom: 3rem;">
-                <span class="lang-es">Experiencia Profesional</span>
-                <span class="lang-en">Professional Experience</span>
-            </h2>
+        <!-- Experience + Education side by side -->
+        <div class="two-col-sections">
 
-            <div class="pipeline-container">
+            <section id="experience">
+                <h2 class="section-title text-center">
+                    <span class="lang-es">Experiencia Profesional</span>
+                    <span class="lang-en">Professional Experience</span>
+                </h2>
+                <div class="pipeline-container">
 
-                <!-- Job 1: Intecnem SL -->
-                <div class="pipeline-node status-completed">
-                    <div class="pipeline-marker">★</div>
-                    <div class="pipeline-content">
-                        <div class="pipeline-title">
-                            <span>
-                                <span class="lang-es">Técnico de Sistemas</span>
-                                <span class="lang-en">Systems Technician</span>
+                    <div class="pipeline-node status-completed">
+                        <div class="pipeline-marker">★</div>
+                        <div class="pipeline-content">
+                            <div class="pipeline-title">
+                                <span>
+                                    <span class="lang-es">Técnico de Sistemas</span>
+                                    <span class="lang-en">Systems Technician</span>
+                                </span>
+                                <span class="pipeline-badge badge-completed">Intecnem SL</span>
+                            </div>
+                            <span class="pipeline-date">
+                                <span class="lang-es">Jul 2025 - Ago 2025 | Almería, España</span>
+                                <span class="lang-en">Jul 2025 - Aug 2025 | Almería, Spain</span>
                             </span>
-                            <span class="pipeline-badge badge-completed">Intecnem SL</span>
+                            <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-muted);">
+                                <li class="lang-es">Implementé nodos Wimax, reduciendo tiempos de despliegue.</li>
+                                <li class="lang-en">Implemented Wimax nodes, reducing deployment times.</li>
+                                <li class="lang-es">Configuré enlaces PTP/PTMP, asegurando conexiones fiables.</li>
+                                <li class="lang-en">Configured PTP/PTMP links, ensuring reliable connections.</li>
+                            </ul>
                         </div>
-                        <span class="pipeline-date">
-                            <span class="lang-es">Jul 2025 - Ago 2025 | Almería, España</span>
-                            <span class="lang-en">Jul 2025 - Aug 2025 | Almería, Spain</span>
-                        </span>
-                        <ul
-                            style="margin-top: 0.5rem; padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-muted);">
-                            <li class="lang-es">Implementé nodos Wimax, reduciendo tiempos de despliegue.</li>
-                            <li class="lang-en">Implemented Wimax nodes, reducing deployment times.</li>
-                            <li class="lang-es">Configuré enlaces PTP/PTMP, asegurando conexiones fiables.</li>
-                            <li class="lang-en">Configured PTP/PTMP links, ensuring reliable connections.</li>
-                        </ul>
                     </div>
-                </div>
 
-                <!-- Job 2: Servicio Provincial Tributario -->
-                <div class="pipeline-node status-completed">
-                    <div class="pipeline-marker">✔</div>
-                    <div class="pipeline-content">
-                        <div class="pipeline-title">
-                            <span>
-                                <span class="lang-es">Prácticas (ASIR)</span>
-                                <span class="lang-en">Internship (ASIR)</span>
+                    <div class="pipeline-node status-completed">
+                        <div class="pipeline-marker">✔</div>
+                        <div class="pipeline-content">
+                            <div class="pipeline-title">
+                                <span>
+                                    <span class="lang-es">Prácticas (ASIR)</span>
+                                    <span class="lang-en">Internship (ASIR)</span>
+                                </span>
+                                <span class="pipeline-badge badge-completed">Serv. Prov. Tributario</span>
+                            </div>
+                            <span class="pipeline-date">
+                                <span class="lang-es">Mayo 2025 | Granada, España</span>
+                                <span class="lang-en">May 2025 | Granada, Spain</span>
                             </span>
-                            <span class="pipeline-badge badge-completed">Servicio Provincial Tributario</span>
+                            <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-muted);">
+                                <li class="lang-es">Colaboré en la migración y actualización de equipos Windows.</li>
+                                <li class="lang-en">Collaborated on Windows migration and updates.</li>
+                                <li class="lang-es">Apoyé tareas de mantenimiento y soporte de incidencias.</li>
+                                <li class="lang-en">Supported maintenance tasks and incident resolution.</li>
+                            </ul>
                         </div>
-                        <span class="pipeline-date">
-                            <span class="lang-es">Mayo 2025 | Granada, España</span>
-                            <span class="lang-en">May 2025 | Granada, Spain</span>
-                        </span>
-                        <ul
-                            style="margin-top: 0.5rem; padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-muted);">
-                            <li class="lang-es">Colaboré en la migración y actualización de equipos Windows.</li>
-                            <li class="lang-en">Collaborated on Windows migration and updates.</li>
-                            <li class="lang-es">Apoyé tareas de mantenimiento y soporte de incidencias.</li>
-                            <li class="lang-en">Supported maintenance tasks and incident resolution.</li>
-                        </ul>
                     </div>
-                </div>
 
-                <!-- Job 3: Invernadero Inteligente SL -->
-                <div class="pipeline-node status-completed">
-                    <div class="pipeline-marker">✔</div>
-                    <div class="pipeline-content">
-                        <div class="pipeline-title">
-                            <span>
-                                <span class="lang-es">Técnico de Automatización</span>
-                                <span class="lang-en">Automation Technician</span>
+                    <div class="pipeline-node status-completed">
+                        <div class="pipeline-marker">✔</div>
+                        <div class="pipeline-content">
+                            <div class="pipeline-title">
+                                <span>
+                                    <span class="lang-es">Técnico de Automatización</span>
+                                    <span class="lang-en">Automation Technician</span>
+                                </span>
+                                <span class="pipeline-badge badge-completed">Invernadero Int. SL</span>
+                            </div>
+                            <span class="pipeline-date">
+                                <span class="lang-es">Veranos 2023 - 2024 | Almería, España</span>
+                                <span class="lang-en">Summers 2023 - 2024 | Almería, Spain</span>
                             </span>
-                            <span class="pipeline-badge badge-completed">Invernadero Inteligente SL</span>
+                            <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-muted);">
+                                <li class="lang-es">Mantuve sistemas automatizados, minimizando paradas.</li>
+                                <li class="lang-en">Maintained automated systems, minimizing downtime.</li>
+                                <li class="lang-es">Diagnostiqué fallos críticos, resolviendo incidencias rápidamente.</li>
+                                <li class="lang-en">Diagnosed critical failures, resolving incidents quickly.</li>
+                            </ul>
                         </div>
-                        <span class="pipeline-date">
-                            <span class="lang-es">Veranos 2023 - 2024 | Almería, España</span>
-                            <span class="lang-en">Summers 2023 - 2024 | Almería, Spain</span>
-                        </span>
-                        <ul
-                            style="margin-top: 0.5rem; padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-muted);">
-                            <li class="lang-es">Mantuve sistemas automatizados, minimizando paradas.</li>
-                            <li class="lang-en">Maintained automated systems, minimizing downtime.</li>
-                            <li class="lang-es">Diagnostiqué fallos críticos, resolviendo incidencias rápidamente.</li>
-                            <li class="lang-en">Diagnosed critical failures, resolving incidents quickly.</li>
-                        </ul>
                     </div>
+
                 </div>
+            </section>
 
-            </div>
-        </section>
+            <section id="boot">
+                <h2 class="section-title text-center">
+                    <span class="lang-es">Historial Académico</span>
+                    <span class="lang-en">Academic History</span>
+                </h2>
+                <div class="pipeline-container">
 
-        <!-- Education: Academic History -->
-        <section id="boot" class="section">
-            <h2 class="section-title text-center" style="margin-bottom: 3rem;">
-                <span class="lang-es">Historial Académico</span>
-                <span class="lang-en">Academic History</span>
-            </h2>
-
-            <div class="pipeline-container">
-
-                <!-- Node 1: SMR -->
-                <div class="pipeline-node status-completed">
-                    <div class="pipeline-marker">✔</div>
-                    <div class="pipeline-content">
-                        <div class="pipeline-title">
-                            <span>
-                                <span class="lang-es">Grado Medio SMR</span>
-                                <span class="lang-en">SMR Degree</span>
-                            </span>
-                            <span class="pipeline-badge badge-completed">
-                                <span class="lang-es">Completado</span>
-                                <span class="lang-en">Completed</span>
-                            </span>
+                    <div class="pipeline-node status-completed">
+                        <div class="pipeline-marker">✔</div>
+                        <div class="pipeline-content">
+                            <div class="pipeline-title">
+                                <span>
+                                    <span class="lang-es">Grado Medio SMR</span>
+                                    <span class="lang-en">SMR Degree</span>
+                                </span>
+                                <span class="pipeline-badge badge-completed">
+                                    <span class="lang-es">Completado</span>
+                                    <span class="lang-en">Completed</span>
+                                </span>
+                            </div>
+                            <span class="pipeline-date">Sep 2022 - Jun 2024</span>
+                            <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0;">
+                                <span class="lang-es">Exploré hardware, redes básicas y administración de Windows Server.</span>
+                                <span class="lang-en">Explored hardware, basic networking, and Windows Server administration.</span>
+                                <strong>
+                                    <span class="lang-es">Resultado:</span>
+                                    <span class="lang-en">Result:</span>
+                                </strong>
+                                <span class="lang-es">Base técnica sólida.</span>
+                                <span class="lang-en">Solid technical foundation.</span>
+                            </p>
                         </div>
-                        <span class="pipeline-date">Sep 2022 - Jun 2024</span>
-                        <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0;">
-                            <span class="lang-es">Exploré hardware, redes básicas y administración de Windows
-                                Server.</span>
-                            <span class="lang-en">Explored hardware, basic networking, and Windows Server
-                                administration.</span>
-                            <strong>
-                                <span class="lang-es">Resultado:</span>
-                                <span class="lang-en">Result:</span>
-                            </strong>
-                            <span class="lang-es">Base técnica sólida.</span>
-                            <span class="lang-en">Solid technical foundation.</span>
-                        </p>
                     </div>
-                </div>
 
-                <!-- Node 2: ASIR (Current) -->
-                <div class="pipeline-node status-current">
-                    <div class="pipeline-marker">➜</div>
-                    <div class="pipeline-content">
-                        <div class="pipeline-title">
-                            <span>
-                                <span class="lang-es">Grado Superior ASIR</span>
-                                <span class="lang-en">ASIR Degree</span>
+                    <div class="pipeline-node status-current">
+                        <div class="pipeline-marker">➜</div>
+                        <div class="pipeline-content">
+                            <div class="pipeline-title">
+                                <span>
+                                    <span class="lang-es">Grado Superior ASIR</span>
+                                    <span class="lang-en">ASIR Degree</span>
+                                </span>
+                                <span class="pipeline-badge badge-loading">
+                                    <span class="lang-es">En Progreso</span>
+                                    <span class="lang-en">In Progress</span>
+                                </span>
+                            </div>
+                            <span class="pipeline-date">
+                                Sep 2024 - Jun 2026
+                                <span class="lang-es">(Previsto)</span>
+                                <span class="lang-en">(Expected)</span>
                             </span>
-                            <span class="pipeline-badge badge-loading">
-                                <span class="lang-es">En Progreso</span>
-                                <span class="lang-en">In Progress</span>
-                            </span>
+                            <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-muted);">
+                                <li class="lang-es">Administración Avanzada de Linux (Conceptos RHCSA)</li>
+                                <li class="lang-en">Advanced Linux Administration (RHCSA concepts)</li>
+                                <li class="lang-es">Gestión de Bases de Datos</li>
+                                <li class="lang-en">Database Management</li>
+                                <li class="lang-es">Alta Disponibilidad y Virtualización</li>
+                                <li class="lang-en">High Availability & Virtualization</li>
+                            </ul>
                         </div>
-                        <span class="pipeline-date">
-                            Sep 2024 - Jun 2026
-                            <span class="lang-es">(Previsto)</span>
-                            <span class="lang-en">(Expected)</span>
-                        </span>
-                        <ul
-                            style="margin-top: 0.5rem; padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-muted);">
-                            <li class="lang-es">Administración Avanzada de Linux (Conceptos RHCSA)</li>
-                            <li class="lang-en">Advanced Linux Administration (RHCSA concepts)</li>
-                            <li class="lang-es">Gestión de Bases de Datos</li>
-                            <li class="lang-en">Database Management</li>
-                            <li class="lang-es">Alta Disponibilidad y Virtualización</li>
-                            <li class="lang-en">High Availability & Virtualization</li>
-                        </ul>
                     </div>
-                </div>
 
-            </div>
-        </section>
+                </div>
+            </section>
+
+        </div>
 
         <!-- Documentation Section -->
         <section id="docs" class="section">
-            <h2 class="section-title text-center" style="margin-bottom: 3rem;">
+            <h2 class="section-title text-center">
                 <span class="lang-es">Base de Conocimiento</span>
                 <span class="lang-en">Knowledge Base</span>
             </h2>
-            <div class="bento-grid" style="grid-template-columns: 1fr; max-width: 500px; margin: 0 auto;">
-                <div class="bento-card text-center" style="border-left: 4px solid var(--accent-success); border-right: 4px solid var(--accent-success); padding: 3rem 2rem;">
-                    <h3 style="margin-bottom: 1.5rem; justify-content: center;">docs.mariosangut.com</h3>
-                    <p class="text-muted" style="margin-bottom: 2rem;">
+            <div class="docs-banner">
+                <div>
+                    <h3>docs.mariosangut.com</h3>
+                    <p class="text-muted" style="font-size: 0.95rem;">
                         <span class="lang-es">Colección de guías técnicas, apuntes de administración de sistemas y laboratorios.</span>
                         <span class="lang-en">Collection of technical guides, system administration notes, and labs.</span>
                     </p>
-                    <a href="https://docs.mariosangut.com" target="_blank" class="btn-terminal" style="width: 100%; justify-content: center;">
-                        <span class="lang-es">>> Acceder</span>
-                        <span class="lang-en">>> Access</span>
-                    </a>
                 </div>
+                <a href="https://docs.mariosangut.com" target="_blank" class="btn-terminal" style="white-space: nowrap;">
+                    <span class="lang-es">>> Acceder</span>
+                    <span class="lang-en">>> Access</span>
+                </a>
             </div>
         </section>
 
         <!-- Certifications Section -->
         <section id="certs" class="section">
-            <h2 class="section-title text-center" style="margin-bottom: 3rem;">
+            <h2 class="section-title text-center">
                 <span class="lang-es">Credenciales Verificadas</span>
                 <span class="lang-en">Verified Credentials</span>
             </h2>
 
             <div class="bento-grid">
 
-                <!-- Cert 1: CCNA -->
                 <div class="bento-card" style="border-left: 4px solid var(--accent-warning);">
                     <div style="display: flex; justify-content: space-between; align-items: start;">
                         <h3>Cisco CCNA</h3>
@@ -379,8 +375,6 @@
                         <span class="lang-es">Emitido: Jun 2025</span>
                         <span class="lang-en">Issued: Jun 2025</span>
                     </span>
-
-                    <!-- Credly Embed Container -->
                     <div style="margin-top: 1rem; display: flex; justify-content: center;">
                         <div data-iframe-width="150" data-iframe-height="270"
                             data-share-badge-id="9cb3886d-ec10-4488-bc7f-69d61d83c26a"
@@ -389,7 +383,6 @@
                     </div>
                 </div>
 
-                <!-- Cert 2: Soft Skills -->
                 <div class="bento-card" style="border-left: 4px solid var(--accent-primary);">
                     <h3>Soft Skills Diploma</h3>
                     <p class="text-muted" style="margin-bottom: 1rem;">Cámara de Comercio de Granada</p>
@@ -398,14 +391,10 @@
                         <span class="lang-en">Issued: Jun 2025</span>
                     </span>
                     <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">
-                        <span class="lang-es">Comunicación, Trabajo en Equipo y Desarrollo Profesional en entornos
-                            TI.</span>
-                        <span class="lang-en">Communication, Teamwork, and Professional Development in IT
-                            environments.</span>
+                        <span class="lang-es">Comunicación, Trabajo en Equipo y Desarrollo Profesional en entornos TI.</span>
+                        <span class="lang-en">Communication, Teamwork, and Professional Development in IT environments.</span>
                     </p>
-                    
-                    <!-- PDF Embed Container -->
-                    <div style="margin-top: 1rem; width: 100%; height: 300px; border: 1px solid var(--border-color); border-radius: 4px; overflow: hidden;">
+                    <div style="width: 100%; height: 300px; border: 1px solid var(--border-color); border-radius: 4px; overflow: hidden;">
                         <object data="softSkill.pdf" type="application/pdf" width="100%" height="100%">
                             <p>
                                 <span class="lang-es">Tu navegador no soporta PDFs integrados. Puedes </span>
@@ -441,8 +430,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Mario Sánchez Gutiérrez. <span class="lang-es">Creado con</span><span class="lang-en">Built
-                    with</span> HTML5 & CSS3.</p>
+            <p>&copy; 2026 Mario Sánchez Gutiérrez. <span class="lang-es">Creado con</span><span class="lang-en">Built with</span> HTML5 & CSS3.</p>
             <p class="text-muted" style="font-size: 0.8rem; margin-top: 0.5rem;">
                 <span class="lang-es">Tiempo de actividad del sistema: 100%</span>
                 <span class="lang-en">System uptime: 100%</span>
@@ -450,83 +438,133 @@
         </div>
     </footer>
 
+    <button id="back-to-top" class="btn-back-top" aria-label="Volver arriba">↑</button>
+
     <script>
+        // --- Language toggle with persistence ---
         const langToggle = document.getElementById('langToggle');
         const body = document.body;
 
+        if (localStorage.getItem('lang') === 'en') {
+            body.classList.add('english-mode');
+        }
+
         langToggle.addEventListener('click', () => {
             body.classList.toggle('english-mode');
+            localStorage.setItem('lang', body.classList.contains('english-mode') ? 'en' : 'es');
         });
 
-        // GitHub API Integration
-        async function fetchGitHubProjects() {
+        // --- Active nav highlight on scroll ---
+        const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+        const sections = ['console', 'stack', 'logs', 'experience', 'boot', 'docs', 'certs', 'connect']
+            .map(id => document.getElementById(id))
+            .filter(Boolean);
+
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const link = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+                if (link) link.classList.toggle('active', entry.isIntersecting);
+            });
+        }, { rootMargin: '-10% 0px -80% 0px', threshold: 0 });
+
+        sections.forEach(s => navObserver.observe(s));
+
+        // --- Back to top ---
+        const backToTop = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 400);
+        }, { passive: true });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // --- GitHub API with localStorage cache ---
+        const CACHE_KEY = 'gh_repos_cache';
+        const CACHE_TTL = 10 * 60 * 1000;
+
+        function escapeHtml(str) {
+            const div = document.createElement('div');
+            div.appendChild(document.createTextNode(String(str)));
+            return div.innerHTML;
+        }
+
+        function safeGithubUrl(url) {
+            return typeof url === 'string' && url.startsWith('https://github.com') ? url : '#';
+        }
+
+        function getCached() {
+            try {
+                const raw = localStorage.getItem(CACHE_KEY);
+                if (!raw) return null;
+                const { data, ts } = JSON.parse(raw);
+                return Date.now() - ts < CACHE_TTL ? data : null;
+            } catch { return null; }
+        }
+
+        function setCache(data) {
+            try { localStorage.setItem(CACHE_KEY, JSON.stringify({ data, ts: Date.now() })); } catch {}
+        }
+
+        function renderRepos(repos) {
             const container = document.getElementById('github-projects-container');
-            if (!container) return;
+            container.innerHTML = '';
+
+            const publicRepos = repos
+                .filter(r => !r.fork && r.name !== 'mariosangut' && r.name !== 'mariosangut.github.io' && r.name !== 'aboutme')
+                .slice(0, 6);
+
+            if (publicRepos.length === 0) {
+                container.innerHTML = `
+                    <div class="log-card text-center" style="padding: 2rem;">
+                        <span class="lang-es">No se encontraron repositorios públicos.</span>
+                        <span class="lang-en">No public repositories found.</span>
+                    </div>`;
+                return;
+            }
+
+            publicRepos.forEach((repo, index) => {
+                const isArchived = repo.archived;
+                const statusColor = isArchived ? 'var(--text-muted)' : 'var(--accent-success)';
+                const name = escapeHtml(repo.name);
+                const desc = repo.description ? escapeHtml(repo.description) : '';
+                const lang = repo.language ? escapeHtml(repo.language) : '';
+                const url = safeGithubUrl(repo.html_url);
+
+                const card = document.createElement('div');
+                card.className = 'log-card';
+                card.innerHTML = `
+                    <div class="log-header">
+                        <span>ID: REPO-${String(index + 1).padStart(3, '0')}</span>
+                        <span>STATUS:
+                            <span class="lang-es" style="color:${statusColor};">${isArchived ? 'ARCHIVADO' : 'ACTIVO'}</span>
+                            <span class="lang-en" style="color:${statusColor};">${isArchived ? 'ARCHIVED' : 'ACTIVE'}</span>
+                        </span>
+                    </div>
+                    <div class="log-title">${name}</div>
+                    ${desc ? `<div class="log-entry"><span class="label"><span class="lang-es">Resumen:</span><span class="lang-en">Summary:</span></span><span>${desc}</span></div>` : ''}
+                    ${lang ? `<div class="log-entry"><span class="label">Stack:</span><span>${lang}</span></div>` : ''}
+                    <a href="${url}" target="_blank" rel="noopener noreferrer" class="log-link">
+                        <span class="lang-es">>> ver_repositorio</span>
+                        <span class="lang-en">>> view_repository</span>
+                    </a>`;
+                container.appendChild(card);
+            });
+        }
+
+        async function fetchGitHubProjects() {
+            const cached = getCached();
+            if (cached) { renderRepos(cached); return; }
 
             try {
-                // Fetch more than needed to account for filtering, then slice exactly 6
                 const response = await fetch('https://api.github.com/users/mariosangut/repos?sort=updated&per_page=20');
-                if (!response.ok) throw new Error('API Rate limit or network error');
-
+                if (!response.ok) throw new Error('API error');
                 const repos = await response.json();
-
-                // Exclude forks, the profile repositories, and the 'aboutme' repository, then take the latest 6
-                const publicRepos = repos.filter(repo => !repo.fork && repo.name !== 'mariosangut' && repo.name !== 'mariosangut.github.io' && repo.name !== 'aboutme').slice(0, 6);
-
-                container.innerHTML = ''; // Clear loading state
-
-                publicRepos.forEach((repo, index) => {
-                    const statusColor = repo.archived ? 'var(--text-muted)' : 'var(--accent-success)';
-                    const statusTextEN = repo.archived ? 'ARCHIVED' : 'ACTIVE';
-                    const statusTextES = repo.archived ? 'ARCHIVADO' : 'ACTIVO';
-
-                    const desc = repo.description || '';
-
-                    // Create card element
-                    const card = document.createElement('div');
-                    card.className = 'log-card';
-                    card.innerHTML = `
-                        <div class="log-header">
-                            <span>ID: REPO-${String(index + 1).padStart(3, '0')}</span>
-                            <span>STATUS:
-                                <span class="lang-es" style="color: ${statusColor};">${statusTextES}</span>
-                                <span class="lang-en" style="color: ${statusColor};">${statusTextEN}</span>
-                            </span>
-                        </div>
-                        <div class="log-title">${repo.name}</div>
-                        ${desc ? `
-                        <div class="log-entry">
-                            <span class="label">
-                                <span class="lang-es">Resumen:</span>
-                                <span class="lang-en">Summary:</span>
-                            </span>
-                            <span>${desc}</span>
-                        </div>` : ''}
-                        ${repo.language ? `
-                        <div class="log-entry">
-                            <span class="label">Stack:</span>
-                            <span>${repo.language}</span>
-                        </div>` : ''}
-                        
-                        <a href="${repo.html_url}" target="_blank" class="log-link">
-                            <span class="lang-es">>> ver_repositorio</span>
-                            <span class="lang-en">>> view_repository</span>
-                        </a>
-                    `;
-                    container.appendChild(card);
-                });
-
-                if (publicRepos.length === 0) {
-                    container.innerHTML = `
-                        <div class="log-card text-center" style="padding: 2rem;">
-                            <span class="lang-es">No se encontraron repositorios públicos.</span>
-                            <span class="lang-en">No public repositories found.</span>
-                        </div>
-                    `;
-                }
-
-            } catch (error) {
-                console.error('Error fetching GitHub projects:', error);
+                setCache(repos);
+                renderRepos(repos);
+            } catch {
+                const container = document.getElementById('github-projects-container');
                 container.innerHTML = `
                     <div class="log-card" style="border-left-color: var(--accent-danger);">
                         <div class="log-title" style="color: var(--accent-danger);">SYS_ERR: Connection Refused</div>
@@ -534,15 +572,11 @@
                             <span class="lang-es">No se pudo cargar el registro de proyectos desde GitHub. Por favor, revisa el perfil directamente.</span>
                             <span class="lang-en">Could not load project logs from GitHub. Please check the profile directly.</span>
                         </div>
-                        <a href="https://github.com/mariosangut" target="_blank" class="log-link">
-                            >> github.com/mariosangut
-                        </a>
-                    </div>
-                `;
+                        <a href="https://github.com/mariosangut" target="_blank" rel="noopener noreferrer" class="log-link">>> github.com/mariosangut</a>
+                    </div>`;
             }
         }
 
-        // test
         document.addEventListener('DOMContentLoaded', fetchGitHubProjects);
     </script>
 </body>
