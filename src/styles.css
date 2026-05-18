@@ -264,8 +264,9 @@ code, .mono { font-family: var(--font-mono); }
 }
 
 .log-entry .label {
-    min-width: 100px;
+    min-width: 70px;
     color: var(--accent-primary);
+    flex-shrink: 0;
 }
 
 .log-link {
