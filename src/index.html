@@ -99,56 +99,29 @@
                 <span class="lang-es">Arquitectura del Sistema</span>
                 <span class="lang-en">System Architecture</span>
             </h2>
-            <div class="bento-grid">
+            <div class="skills-terminal">
 
-                <div class="bento-card">
-                    <h3>
-                        <span class="lang-es">Cloud-Native &amp; Orquestación</span>
-                        <span class="lang-en">Cloud-Native &amp; Orchestration</span>
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">Talos Linux</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Helm</span>
-                        <span class="skill-tag">Proxmox</span>
-                    </div>
+                <div class="skills-row">
+                    <span class="skills-cat">
+                        <span class="lang-es">// Cloud-Native &amp; Orquestación</span>
+                        <span class="lang-en">// Cloud-Native &amp; Orchestration</span>
+                    </span>
+                    <span class="skills-list">Kubernetes · Talos Linux · Docker · Helm · Proxmox</span>
                 </div>
 
-                <div class="bento-card">
-                    <h3>GitOps &amp; CI/CD</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">GitHub Actions</span>
-                        <span class="skill-tag">GHCR</span>
-                        <span class="skill-tag">Traefik</span>
-                        <span class="skill-tag">Ansible</span>
-                        <span class="skill-tag">Nginx</span>
-                    </div>
+                <div class="skills-row">
+                    <span class="skills-cat">// GitOps &amp; CI/CD</span>
+                    <span class="skills-list">GitHub Actions · GHCR · Traefik · Ansible · Nginx</span>
                 </div>
 
-                <div class="bento-card">
-                    <h3>
-                        <span class="lang-es">Kernel &amp; Scripting</span>
-                        <span class="lang-en">Kernel &amp; Scripting</span>
-                    </h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Linux (Debian/Ubuntu)</span>
-                        <span class="skill-tag">Bash</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">PowerShell</span>
-                        <span class="skill-tag">Windows Server</span>
-                    </div>
+                <div class="skills-row">
+                    <span class="skills-cat">// Kernel &amp; Scripting</span>
+                    <span class="skills-list">Linux (Debian/Ubuntu) · Bash · Python · PowerShell · Windows Server</span>
                 </div>
 
-                <div class="bento-card">
-                    <h3>NetSec Ops</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">OpenVPN / WireGuard</span>
-                        <span class="skill-tag">iptables / UFW</span>
-                        <span class="skill-tag">Wireshark</span>
-                        <span class="skill-tag">Nmap</span>
-                        <span class="skill-tag">Switching / VLANs</span>
-                    </div>
+                <div class="skills-row">
+                    <span class="skills-cat">// NetSec Ops</span>
+                    <span class="skills-list">OpenVPN / WireGuard · iptables / UFW · Wireshark · Nmap · Switching / VLANs</span>
                 </div>
 
             </div>
@@ -203,10 +176,10 @@
                         </span>
                     </div>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.75rem;">
-                        <a href="https://github.com/mariosangut/portfolio" target="_blank" rel="noopener noreferrer" class="log-link" style="margin-top: 0;">
+                        <a href="https://github.com/mariosangut/www.mariosangut" target="_blank" rel="noopener noreferrer" class="log-link" style="margin-top: 0;">
                             >> github/portfolio
                         </a>
-                        <a href="https://github.com/mariosangut/portfolio/blob/main/.github/workflows/setup.yml" target="_blank" rel="noopener noreferrer" class="log-link" style="margin-top: 0;">
+                        <a href="https://github.com/mariosangut/www.mariosangut.com/blob/main/.github/workflows/setup.yml" target="_blank" rel="noopener noreferrer" class="log-link" style="margin-top: 0;">
                             >> ver_pipeline
                         </a>
                     </div>
@@ -419,87 +392,46 @@
 
         </div>
 
-        <!-- Documentation Section -->
-        <section id="docs" class="section">
-            <h2 class="section-title text-center">
-                <span class="lang-es">Base de Conocimiento</span>
-                <span class="lang-en">Knowledge Base</span>
-            </h2>
-            <div class="docs-banner">
-                <div>
-                    <h3>docs.mariosangut.com</h3>
-                    <p class="text-muted" style="font-size: 0.95rem;">
-                        <span class="lang-es">Colección de guías técnicas, apuntes de administración de sistemas y laboratorios.</span>
-                        <span class="lang-en">Collection of technical guides, system administration notes, and labs.</span>
-                    </p>
-                </div>
-                <a href="https://docs.mariosangut.com" target="_blank" class="btn-terminal" style="white-space: nowrap;">
-                    <span class="lang-es">>> Acceder</span>
-                    <span class="lang-en">>> Access</span>
-                </a>
-            </div>
-        </section>
+        <!-- Documentation + Certifications side by side -->
+        <div class="two-col-sections">
 
-        <!-- Certifications Section -->
-        <section id="certs" class="section">
-            <h2 class="section-title text-center">
-                <span class="lang-es">Credenciales Verificadas</span>
-                <span class="lang-en">Verified Credentials</span>
-            </h2>
-
-            <div class="bento-grid">
-
-                <div class="bento-card" style="border-left: 4px solid var(--accent-warning);">
-                    <div style="display: flex; justify-content: space-between; align-items: start;">
-                        <h3>Cisco CCNA</h3>
-                        <span class="pipeline-badge badge-completed"
-                            style="background: rgba(34, 197, 94, 0.1); color: var(--accent-success); border: 1px solid var(--accent-success); font-size: 0.7rem;">
-                            ✔ Verified via Credly
-                        </span>
+            <section id="docs">
+                <h2 class="section-title text-center">
+                    <span class="lang-es">Base de Conocimiento</span>
+                    <span class="lang-en">Knowledge Base</span>
+                </h2>
+                <div class="docs-terminal">
+                    <div class="docs-terminal-header">
+                        <span class="cmd">root@mariosangut:~#</span> cat /usr/share/doc/README
                     </div>
-                    <p class="text-muted" style="margin-bottom: 1rem;">
-                        <span class="lang-es">Introducción a Redes</span>
-                        <span class="lang-en">Introduction to Networks</span>
-                    </p>
-                    <span class="skill-tag" style="margin-bottom: 1rem; display: inline-block;">
-                        <span class="lang-es">Emitido: Jun 2025</span>
-                        <span class="lang-en">Issued: Jun 2025</span>
-                    </span>
-                    <div style="margin-top: 1rem; display: flex; justify-content: center;">
-                        <div data-iframe-width="150" data-iframe-height="270"
-                            data-share-badge-id="9cb3886d-ec10-4488-bc7f-69d61d83c26a"
-                            data-share-badge-host="https://www.credly.com"></div>
-                        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                    <div class="docs-terminal-body">
+                        <p>
+                            <span class="lang-es">Guías técnicas, runbooks de administración y laboratorios de infraestructura. Self-hosted, versionado, bajo control total.</span>
+                            <span class="lang-en">Technical guides, sysadmin runbooks, and infrastructure labs. Self-hosted, versioned, fully owned.</span>
+                        </p>
+                        <a href="https://docs.mariosangut.com" target="_blank" rel="noopener noreferrer" class="btn-terminal" style="white-space: nowrap;">
+                            <span class="lang-es">>> Acceder</span>
+                            <span class="lang-en">>> Access</span>
+                        </a>
                     </div>
                 </div>
+            </section>
 
-                <div class="bento-card" style="border-left: 4px solid var(--accent-primary);">
-                    <h3>Soft Skills Diploma</h3>
-                    <p class="text-muted" style="margin-bottom: 1rem;">Cámara de Comercio de Granada</p>
-                    <span class="skill-tag" style="margin-bottom: 1rem; display: inline-block;">
-                        <span class="lang-es">Emitido: Jun 2025</span>
-                        <span class="lang-en">Issued: Jun 2025</span>
-                    </span>
-                    <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">
-                        <span class="lang-es">Comunicación, Trabajo en Equipo y Desarrollo Profesional en entornos TI.</span>
-                        <span class="lang-en">Communication, Teamwork, and Professional Development in IT environments.</span>
-                    </p>
-                    <div style="width: 100%; height: 300px; border: 1px solid var(--border-color); border-radius: 4px; overflow: hidden;">
-                        <object data="softSkill.pdf" type="application/pdf" width="100%" height="100%">
-                            <p>
-                                <span class="lang-es">Tu navegador no soporta PDFs integrados. Puedes </span>
-                                <span class="lang-en">Your browser does not support embedded PDFs. You can </span>
-                                <a href="softSkill.pdf" target="_blank" style="color: var(--accent-primary);">
-                                    <span class="lang-es">descargar el archivo aquí</span>
-                                    <span class="lang-en">download the file here</span>
-                                </a>
-                            </p>
-                        </object>
-                    </div>
+            <section id="certs">
+                <h2 class="section-title text-center">
+                    <span class="lang-es">Credenciales Verificadas</span>
+                    <span class="lang-en">Verified Credentials</span>
+                </h2>
+                <div class="certs-grid">
+                    <!-- Para añadir más badges: duplica el div y cambia data-share-badge-id -->
+                    <div data-iframe-width="150" data-iframe-height="270"
+                        data-share-badge-id="9cb3886d-ec10-4488-bc7f-69d61d83c26a"
+                        data-share-badge-host="https://www.credly.com"></div>
                 </div>
+                <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </section>
 
-            </div>
-        </section>
+        </div>
 
         <!-- Contact Section -->
         <section id="connect" class="section text-center">

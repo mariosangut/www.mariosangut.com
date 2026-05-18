@@ -166,47 +166,13 @@ code, .mono { font-family: var(--font-mono); }
     50% { opacity: 0; }
 }
 
-/* --- Bento Grid (Skills) --- */
-.bento-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
-}
-
-.bento-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 1.5rem;
-    transition: transform 0.2s, border-color 0.2s;
-    position: relative;
-    overflow: hidden;
-}
-
-.bento-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent-primary);
-    box-shadow: var(--shadow-glow);
-}
-
-.bento-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.bento-card h3::before {
-    content: '//';
-    color: var(--accent-primary);
-    font-family: var(--font-mono);
-}
-
-.skill-tags {
+/* --- Certifications Grid --- */
+.certs-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: flex-start;
 }
 
 .skill-tag {
@@ -219,10 +185,72 @@ code, .mono { font-family: var(--font-mono); }
     color: var(--text-muted);
 }
 
-.skill-tag:hover {
-    background: rgba(59, 130, 246, 0.1);
+/* --- Skills Terminal (compact list) --- */
+.skills-terminal {
+    background: var(--bg-terminal);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.5rem 2rem;
+    font-family: var(--font-mono);
+}
+
+.skills-row {
+    display: flex;
+    gap: 2rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(51, 65, 85, 0.6);
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.skills-row:last-child {
+    border-bottom: none;
+}
+
+.skills-cat {
     color: var(--accent-primary);
-    border-color: var(--accent-primary);
+    font-size: 0.85rem;
+    min-width: 230px;
+    flex-shrink: 0;
+}
+
+.skills-list {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+/* --- Docs Terminal --- */
+.docs-terminal {
+    background: var(--bg-terminal);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: var(--font-mono);
+}
+
+.docs-terminal-header {
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.docs-terminal-body {
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.docs-terminal-body p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    max-width: 600px;
 }
 
 /* --- Projects (System Logs) --- */
@@ -298,24 +326,6 @@ code, .mono { font-family: var(--font-mono); }
     margin: 0;
 }
 
-/* --- Docs Banner --- */
-.docs-banner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 1.5rem 2rem;
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-left: 4px solid var(--accent-success);
-    border-right: 4px solid var(--accent-success);
-    border-radius: 12px;
-}
-
-.docs-banner h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.4rem;
-}
 
 /* --- Pipeline (Experience / Education) --- */
 .pipeline-container {
@@ -594,13 +604,14 @@ footer {
     .log-entry { flex-direction: column; }
     .log-entry .label { margin-bottom: 0.2rem; }
 
+    .skills-terminal { padding: 0.25rem 1rem; }
+    .skills-row { flex-direction: column; gap: 0.3rem; }
+    .skills-cat { min-width: unset; }
+
+    .docs-terminal-body { flex-direction: column; align-items: flex-start; gap: 1rem; }
+
     .social-btns { flex-wrap: wrap; }
     .btn-terminal { padding: 0.6rem 1rem; font-size: 0.9rem; }
-
-    .docs-banner {
-        flex-direction: column;
-        text-align: center;
-    }
 
     .btn-back-top { bottom: 1rem; right: 1rem; }
 }
