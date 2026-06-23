@@ -199,7 +199,7 @@ code, .mono { font-family: var(--font-mono); }
     gap: 2rem;
     padding: 0.85rem 0;
     border-bottom: 1px solid rgba(51, 65, 85, 0.6);
-    align-items: baseline;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -215,9 +215,38 @@ code, .mono { font-family: var(--font-mono); }
 }
 
 .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     color: var(--text-muted);
     font-size: 0.85rem;
-    line-height: 1.8;
+}
+
+.skill-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+}
+
+.skill-item:hover {
+    background: rgba(59, 130, 246, 0.08);
+    border-color: var(--accent-primary);
+    color: var(--text-main);
+}
+
+.skill-item svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+    flex-shrink: 0;
 }
 
 /* --- Docs Terminal --- */
@@ -483,6 +512,13 @@ footer {
     box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
     text-decoration: none;
     color: var(--accent-primary);
+}
+
+.btn-terminal svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    flex-shrink: 0;
 }
 
 /* --- Back to Top Button --- */
